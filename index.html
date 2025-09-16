@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R AriYansh Technologies | IT Consulting & Digital Solutions Experts</title>
+  <meta name="description"
+    content="R AriYansh Technologies offers expert IT Consulting, Cloud Solutions, DevOps, Data Engineering, and Software Development services for businesses worldwide." />
+  <meta name="keywords"
+    content="IT Consulting, Cloud Solutions, DevOps, Data Engineering, Software Development, Digital Transformation, India, R AriYansh, AWS, Kubernetes, Node.js, Python" />
+  <meta name="author" content="R AriYansh Technologies Pvt Ltd" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.r-ariyansh.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="R.png" type="image/png">
+  <link rel="apple-touch-icon" href="R.png">
+
+  <!-- Preload critical assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "R AriYansh Technologies Pvt Ltd",
+    "url": "https://www.r-ariyansh.com/",
+    "logo": "https://www.r-ariyansh.com/R.png",
+    "description": "IT Consulting, Cloud Solutions, DevOps, Data Engineering, and Software Development services",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bangalore",
+      "addressCountry": "India"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-99386-36246",
+      "contactType": "Customer service",
+      "email": "ariyansh@r-ariyansh.com",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/r-ariyansh-technolgies/",
+      "https://twitter.com/rariyanshtech",
+      "https://www.youtube.com/@rariyanshtech",
+      "https://github.com/rariyanshtech"
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+            display: ['Poppins', 'Inter', 'ui-sans-serif']
+          },
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              900: '#1e3a8a'
+            },
+            secondary: {
+              500: '#7c3aed',
+              600: '#6d28d9'
+            },
+            dark: {
+              900: '#0f172a',
+              800: '#1e293b',
+              700: '#334155'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  </noscript>
+
+  <!-- Font Awesome -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </noscript>
+
+  <!-- SplideJS for carousels -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  </noscript>
+
+  <style>
+    :root {
+      --brand-1: #0f172a;
+      --brand-2: #2563eb;
+      --accent: #7c3aed;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      overflow-x: hidden;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      line-height: 1.7;
+    }
+
+    .bg-hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 80vh;
+    }
+
+    /* Glass morphism effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Custom underline effect */
+    .underline-effect {
+      position: relative;
+      display: inline-block;
+    }
+
+    .underline-effect::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--brand-2);
+      transition: width 0.3s ease;
+    }
+
+    .underline-effect:hover::after {
+      width: 100%;
+    }
+
+    /* Focus styles for accessibility */
+    a:focus,
+    button:focus,
+    input:focus,
+    textarea:focus {
+      outline: 3px solid rgba(37, 99, 235, 0.5);
+      outline-offset: 2px;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--brand-2);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--brand-1);
+    }
+
+    /* Animation for floating elements */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Hover scale effect */
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.03);
+    }
+
+    /* Glow effect */
+    .glow-effect {
+      position: relative;
+    }
+
+    .glow-effect::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: inherit;
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .glow-effect:hover::after {
+      opacity: 1;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      .bg-hero {
+        min-height: 70vh;
+      }
+
+      .section-padding {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Particle background */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .loader {
+      width: 48px;
+      height: 48px;
+      border: 5px solid #2563eb;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Custom cursor */
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #2563eb;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease;
+      mix-blend-mode: difference;
+    }
+
+    .cursor-outline {
+      width: 30px;
+      height: 30px;
+      border: 2px solid #2563eb;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease;
+      mix-blend-mode: difference;
+    }
+
+    /* 3D card effect */
+    .card-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease;
+    }
+
+    .card-3d:hover {
+      transform: rotateY(10deg) rotateX(5deg);
+    }
+
+    /* Gradient border */
+    .gradient-border {
+      position: relative;
+      border-radius: 12px;
+    }
+
+    .gradient-border::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #2563eb, #7c3aed);
+      border-radius: inherit;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gradient-border:hover::before {
+      opacity: 1;
+    }
+
+    .solution-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid rgba(226, 232, 240, 0.6);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      border-color: #2563eb;
+    }
+
+    .solution-card:hover::before {
+      opacity: 1;
+    }
+
+    .expertise-card {
+      background: #f9fafb;
+      border-radius: 14px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.35s ease;
+      border: 1px solid #e5e7eb;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-8px);
+      background: #ffffff;
+      border-color: #2563eb;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+    }
+
+    /* subtle icon animation */
+    .expertise-card i {
+      transition: transform 0.4s ease, color 0.4s ease;
+    }
+
+    .expertise-card:hover i {
+      transform: scale(1.2) rotate(-5deg);
+      color: #2563eb;
+    }
+
+    /* fade-in effect for text */
+    .expertise-card h3,
+    .expertise-card p {
+      transition: color 0.3s ease;
+    }
+
+    .expertise-card:hover h3 {
+      color: #1e3a8a;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    /* Improved section spacing */
+    .section-padding {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    /* Better text contrast */
+    .text-slate-700 {
+      color: #334155;
+    }
+
+    /* Improved button styles */
+    .btn-primary {
+      background: linear-gradient(90deg, #2563eb, #4f46e5);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #1d4ed8, #4338ca);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+    }
+
+    /* Content readability improvements */
+    .content p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Improved form styles */
+    .form-input {
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus {
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+  </style>
+</head>
+
+<body class="antialiased text-slate-800 bg-white font-sans leading-relaxed relative">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <span class="loader"></span>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Particle background -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand -->
+        <div class="flex items-center gap-3">
+          <a href="#hero" class="flex items-center gap-3 focus:outline-none hover-scale">
+            <img src="R.png" alt="R AriYansh Technologies Logo - IT Consulting and Digital Solutions"
+              class="h-10 w-10 object-contain" />
+            <div class="leading-tight">
+              <div class="text-lg font-bold text-slate-900">R AriYansh Technologies</div>
+              <div class="text-xs text-primary-500 font-medium">Empower at Scale</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700" aria-label="Main navigation">
+          <a href="#about" class="hover:text-primary-500 transition underline-effect">About</a>
+          <a href="#services" class="hover:text-primary-500 transition underline-effect">Services</a>
+          <a href="#solutions" class="hover:text-primary-500 transition underline-effect">Solutions</a>
+          <a href="#case-studies" class="hover:text-primary-500 transition underline-effect">Case Studies</a>
+          <a href="#contact" class="hover:text-primary-500 transition underline-effect">Contact</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+          <a href="#contact"
+            class="hidden sm:inline-flex items-center gap-2 btn-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm transition glow-effect">
+            <i class="fas fa-paper-plane mr-1"></i>
+            Contact Us
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="mobileMenuBtn" aria-expanded="false"
+            class="md:hidden p-2 rounded-md hover:bg-slate-100 transition focus:outline-none" aria-label="Open menu">
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100 bg-white shadow-lg">
+      <div class="px-4 pt-4 pb-6 space-y-3">
+        <a href="#about"
+          class="block py-2.5 px-4 text-slate-700 rounded-lg hover:bg-slate-50 transition font-medium">About</a>
+        <a href="#services"
+          class="block py-2.5 px-4 text-slate-700 rounded-lg hover:bg-slate-50 transition font-medium">Services</a>
+        <a href="#solutions"
+          class="block py-2.5 px-4 text-slate-700 rounded-lg hover:bg-slate-50 transition font-medium">Solutions</a>
+        <a href="#case-studies"
+          class="block py-2.5 px-4 text-slate-700 rounded-lg hover:bg-slate-50 transition font-medium">Case Studies</a>
+        <a href="#contact"
+          class="block py-2.5 px-4 text-slate-700 rounded-lg hover:bg-slate-50 transition font-medium">Contact</a>
+        <div class="pt-2">
+          <a href="#contact"
+            class="inline-flex w-full items-center justify-center gap-2 btn-primary text-white px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm transition glow-effect">
+            <i class="fas fa-paper-plane mr-1"></i>
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main id="hero" class="overflow-hidden">
+    <section class="bg-hero relative flex items-center">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right" data-aos-delay="100">
+            <div class="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-1.5 rounded-full text-xs mb-4">
+              <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+              Innovating since 2020
+            </div>
+            <h1
+              class="text-white hero-title font-bold tracking-tight leading-tight text-4xl sm:text-5xl lg:text-6xl mb-6">
+              Powering Digital Transformation Through <span class="gradient-text">Scalable Innovation</span>
+            </h1>
+            <p class="mt-4 text-slate-200 max-w-xl text-lg leading-relaxed">
+              We help startups and enterprises build resilient, scalable platforms using modern engineering, cloud-first
+              architecture, and data-driven automation. Our expert team delivers cutting-edge IT consulting and digital
+              solutions that drive business growth.
+            </p>
+            <div class="mt-8 flex gap-4 items-center flex-wrap">
+              <a href="#contact"
+                class="inline-flex items-center gap-2 btn-primary text-white font-semibold px-6 py-3 rounded-full shadow hover:shadow-lg transition glow-effect">
+                <i class="fas fa-rocket mr-1"></i>
+                Get Started
+              </a>
+              <a href="#solutions"
+                class="inline-flex items-center gap-2 text-white border border-white/20 px-5 py-2.5 rounded-full hover:bg-white/10 transition hover-scale">
+                <i class="fas fa-box-open mr-1"></i>
+                Our Solutions
+              </a>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-6 text-sm text-slate-200">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-map-marker-alt text-primary-500"></i>
+                Bangalore, India
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-globe text-primary-500"></i>
+                Remote-first Company
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-users text-primary-500"></i>
+                30–50 Experts
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden lg:block" data-aos="fade-left" data-aos-delay="200">
+            <!-- Feature panel with floating animation -->
+            <div class="p-8 rounded-2xl glass shadow-xl floating relative overflow-hidden card-3d">
+              <div class="absolute -top-20 -right-20 w-40 h-40 bg-primary-500 rounded-full opacity-10"></div>
+              <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-accent rounded-full opacity-10"></div>
+
+              <div class="relative z-10">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="text-white font-bold text-xl">Trusted by innovators across</h3>
+                    <p class="text-slate-200 text-sm mt-1">FinTech · SaaS · Healthcare · Retail · Logistics</p>
+                  </div>
+                  <div class="text-slate-200 text-sm bg-white/10 px-3 py-1 rounded-full">10+ Clients</div>
+                </div>
+
+                <div class="mt-8 grid grid-cols-2 gap-4">
+                  <div
+                    class="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-primary-500/30 transition hover-scale">
+                    <div class="text-white font-semibold flex items-center gap-2">
+                      <i class="fas fa-cloud text-primary-500"></i>
+                      Cloud-Native
+                    </div>
+                    <div class="text-slate-200 text-xs mt-2">AWS, GCP, Azure, Kubernetes</div>
+                  </div>
+                  <div
+                    class="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-primary-500/30 transition hover-scale">
+                    <div class="text-white font-semibold flex items-center gap-2">
+                      <i class="fas fa-robot text-primary-500"></i>
+                      Automation
+                    </div>
+                    <div class="text-slate-200 text-xs mt-2">CI/CD · IaC · DevOps</div>
+                  </div>
+                  <div
+                    class="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-primary-500/30 transition hover-scale">
+                    <div class="text-white font-semibold flex items-center gap-2">
+                      <i class="fas fa-database text-primary-500"></i>
+                      Data Engineering
+                    </div>
+                    <div class="text-slate-200 text-xs mt-2">ETL, Data Lakes, Analytics</div>
+                  </div>
+                  <div
+                    class="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-primary-500/30 transition hover-scale">
+                    <div class="text-white font-semibold flex items-center gap-2">
+                      <i class="fas fa-shield-alt text-primary-500"></i>
+                      Security
+                    </div>
+                    <div class="text-slate-200 text-xs mt-2">Compliance · Monitoring · SRE</div>
+                  </div>
+                </div>
+
+                <div class="mt-6 bg-white/5 p-4 rounded-lg border border-white/10 hover-scale">
+                  <div class="text-slate-200 text-sm">
+                    <i class="fas fa-star text-yellow-400 mr-2"></i>
+                    <strong>Success Story:</strong> Reduced cloud costs by 42% and improved release cadence for a
+                    FinTech startup.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center z-20">
+          <a href="#impact"
+            class="flex flex-col items-center gap-2 text-slate-200 hover:text-white transition animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="text-xs">Scroll to explore</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS LOGO MARQUEE -->
+    <section id="impact" class="relative bg-gradient-to-br from-blue-50 to-white section-padding">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center text-gray-900" data-aos="fade-up">
+          Driving measurable outcomes <span class="gradient-text">🚀</span>
+        </h2>
+        <p class="mt-4 text-center text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          We help businesses scale faster, cut costs, and improve reliability with modern engineering practices. Our
+          data-driven approach ensures tangible results for every client.
+        </p>
+
+        <!-- Metrics -->
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="rounded-2xl bg-white shadow-lg p-8 text-center hover:scale-105 transform transition hover-scale"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-rocket"></i></div>
+            <div class="text-4xl font-extrabold text-gray-900">2×</div>
+            <div class="text-gray-500 mt-2">Faster release cycles</div>
+          </div>
+          <div class="rounded-2xl bg-white shadow-lg p-8 text-center hover:scale-105 transform transition hover-scale"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="text-green-600 text-5xl mb-4"><i class="fas fa-shield-alt"></i></div>
+            <div class="text-4xl font-extrabold text-gray-900">99.9%</div>
+            <div class="text-gray-500 mt-2">Uptime on critical apps</div>
+          </div>
+          <div class="rounded-2xl bg-white shadow-lg p-8 text-center hover:scale-105 transform transition hover-scale"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="text-yellow-500 text-5xl mb-4"><i class="fas fa-dollar-sign"></i></div>
+            <div class="text-4xl font-extrabold text-gray-900">30%</div>
+            <div class="text-gray-500 mt-2">Cloud cost reduction</div>
+          </div>
+          <div class="rounded-2xl bg-white shadow-lg p-8 text-center hover:scale-105 transform transition hover-scale"
+            data-aos="fade-up" data-aos-delay="400">
+            <div class="text-purple-600 text-5xl mb-4"><i class="fas fa-users-cog"></i></div>
+            <div class="text-4xl font-extrabold text-gray-900">50+</div>
+            <div class="text-gray-500 mt-2">Experts on-demand</div>
+          </div>
+        </div>
+
+        <!-- Testimonials Carousel -->
+        <div class="mt-16">
+          <h3 class="text-2xl font-bold text-center text-gray-900" data-aos="fade-up">What our partners say</h3>
+          <div class="mt-8 grid md:grid-cols-3 gap-8">
+            <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition hover-scale" data-aos="fade-up"
+              data-aos-delay="100">
+              <p class="text-gray-800">"They migrated our platform to AWS with <span
+                  class="font-bold text-blue-600">zero downtime</span> and cut infra costs by <span
+                  class="font-bold">28%</span>."</p>
+              <div class="mt-4 flex items-center">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full"
+                  alt="CTO of FinTech Startup client testimonial">
+                <div class="ml-3 text-sm text-gray-600">CTO, FinTech Startup</div>
+              </div>
+            </div>
+            <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition hover-scale" data-aos="fade-up"
+              data-aos-delay="200">
+              <p class="text-gray-800">"<span class="font-bold text-green-600">Release time</span> went from weeks to
+                days thanks to their automation."</p>
+              <div class="mt-4 flex items-center">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full"
+                  alt="Head of Engineering at SaaS company testimonial">
+                <div class="ml-3 text-sm text-gray-600">Head of Engineering, SaaS</div>
+              </div>
+            </div>
+            <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition hover-scale" data-aos="fade-up"
+              data-aos-delay="300">
+              <p class="text-gray-800">"Reliable backend team — clean code, strong ownership, and proactive
+                communication."</p>
+              <div class="mt-4 flex items-center">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" class="w-10 h-10 rounded-full"
+                  alt="Product Director at Enterprise company testimonial">
+                <div class="ml-3 text-sm text-gray-600">Product Director, Enterprise</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-padding bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <span
+              class="inline-block bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-xs font-semibold mb-4">WHO
+              WE ARE</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Driving Digital Transformation Through <span
+                class="gradient-text">Innovation</span></h2>
+            <div class="content">
+              <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                R AriYansh Technologies partners with organizations to build product-led platforms that scale, simplify
+                operations, and deliver
+                measurable results. Our team of experienced developers, architects, and engineers brings expertise
+                across the full technology stack.
+              </p>
+              <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                Founded in 2020, we've helped numerous startups and enterprises navigate their digital transformation
+                journeys with cutting-edge solutions
+                in cloud computing, DevOps, data engineering, and custom software development.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div class="flex items-start gap-3 p-4 bg-slate-50 rounded-lg hover-scale">
+                <div class="bg-primary-100 text-primary-600 p-2 rounded-full">
+                  <i class="fas fa-bolt text-sm"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800">Rapid Deployment</h3>
+                  <p class="text-slate-600 text-sm">Go from concept to production in weeks, not months</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-4 bg-slate-50 rounded-lg hover-scale">
+                <div class="bg-primary-100 text-primary-600 p-2 rounded-full">
+                  <i class="fas fa-hand-holding-usd text-sm"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800">Cost Efficiency</h3>
+                  <p class="text-slate-600 text-sm">Optimize cloud spend and resource allocation</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact"
+              class="inline-flex items-center gap-2 btn-primary text-white font-semibold px-6 py-3 rounded-full shadow hover:shadow-lg transition glow-effect">
+              <i class="fas fa-calendar-check mr-1"></i>
+              Schedule a Consultation
+            </a>
+          </div>
+
+          <div data-aos="fade-left" class="relative">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="mt-12">
+                <div class="bg-primary-50 rounded-2xl p-6 shadow-sm hover-scale">
+                  <div class="text-primary-600 text-3xl mb-4">
+                    <i class="fas fa-cloud"></i>
+                  </div>
+                  <h3 class="font-bold text-slate-800 mb-2">Cloud Architecture</h3>
+                  <p class="text-slate-600 text-sm">Designing scalable, resilient cloud infrastructure</p>
+                </div>
+                <div class="bg-slate-50 rounded-2xl p-6 shadow-sm mt-4 hover-scale">
+                  <div class="text-primary-600 text-3xl mb-4">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <h3 class="font-bold text-slate-800 mb-2">Full-Stack Development</h3>
+                  <p class="text-slate-600 text-sm">Building modern, responsive web applications</p>
+                </div>
+              </div>
+              <div>
+                <div class="bg-slate-50 rounded-2xl p-6 shadow-sm hover-scale">
+                  <div class="text-primary-600 text-3xl mb-4">
+                    <i class="fas fa-server"></i>
+                  </div>
+                  <h3 class="font-bold text-slate-800 mb-2">DevOps & Automation</h3>
+                  <p class="text-slate-600 text-sm">Streamlining CI/CD and infrastructure management</p>
+                </div>
+                <div class="bg-primary-50 rounded-2xl p-6 shadow-sm mt-4 hover-scale">
+                  <div class="text-primary-600 text-3xl mb-4">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h3 class="font-bold text-slate-800 mb-2">Data Engineering</h3>
+                  <p class="text-slate-600 text-sm">Building robust data pipelines and analytics</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating elements -->
+            <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary-100 rounded-full opacity-30 z-0"></div>
+            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary-100 rounded-full opacity-30 z-0"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section-padding bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="inline-block bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-xs font-semibold mb-4">OUR
+            SERVICES</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Comprehensive <span class="gradient-text">IT
+              Solutions</span> for Modern Businesses</h2>
+          <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+            We provide end-to-end technology services that help businesses innovate, scale, and optimize their digital
+            operations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover-scale"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-primary-50 text-primary-600 p-3 rounded-xl inline-block mb-4">
+              <i class="fas fa-cloud text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Cloud & DevOps</h3>
+            <p class="text-slate-600 mb-4">
+              Design, implementation, and management of cloud infrastructure with full automation and CI/CD pipelines.
+            </p>
+            <ul class="space-y-2 text-slate-600 text-sm">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Cloud Migration & Optimization
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Infrastructure as Code (IaC)
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                CI/CD Pipeline Implementation
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Containerization & Orchestration
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover-scale"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-primary-50 text-primary-600 p-3 rounded-xl inline-block mb-4">
+              <i class="fas fa-code text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Software Development</h3>
+            <p class="text-slate-600 mb-4">
+              End-to-end custom software development services from concept to deployment and maintenance.
+            </p>
+            <ul class="space-y-2 text-slate-600 text-sm">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Web & Mobile Applications
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                API Development & Integration
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Microservices Architecture
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Legacy System Modernization
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover-scale"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-primary-50 text-primary-600 p-3 rounded-xl inline-block mb-4">
+              <i class="fas fa-database text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Data Engineering</h3>
+            <p class="text-slate-600 mb-4">
+              Building scalable data pipelines, warehouses, and analytics platforms to drive data-informed decisions.
+            </p>
+            <ul class="space-y-2 text-slate-600 text-sm">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Data Pipeline Development
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Data Warehousing & Lakes
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Business Intelligence & Analytics
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Machine Learning Pipelines
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover-scale"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-primary-50 text-primary-600 p-3 rounded-xl inline-block mb-4">
+              <i class="fas fa-shield-alt text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Security & Compliance</h3>
+            <p class="text-slate-600 mb-4">
+              Comprehensive security solutions to protect your infrastructure, applications, and data.
+            </p>
+            <ul class="space-y-2 text-slate-600 text-sm">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Security Audits & Assessments
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Infrastructure Hardening
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Compliance Implementation
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Incident Response Planning
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover-scale"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-primary-50 text-primary-600 p-3 rounded-xl inline-block mb-4">
+              <i class="fas fa-headset text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">IT Consulting</h3>
+            <p class="text-slate-600 mb-4">
+              Strategic technology consulting to align your IT infrastructure with business goals and objectives.
+            </p>
+            <ul class="space-y-2 text-slate-600 text-sm">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Technology Strategy
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Architecture Review
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Digital Transformation
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Team Augmentation
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover-scale"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-primary-50 text-primary-600 p-3 rounded-xl inline-block mb-4">
+              <i class="fas fa-sync-alt text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Support & Maintenance</h3>
+            <p class="text-slate-600 mb-4">
+              Ongoing support, monitoring, and maintenance services to ensure system reliability and performance.
+            </p>
+            <ul class="space-y-2 text-slate-600 text-sm">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                24/7 Monitoring & Alerting
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Performance Optimization
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Incident Management
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check-circle text-green-500"></i>
+                Proactive System Updates
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center" data-aos="fade-up">
+          <a href="#contact"
+            class="inline-flex items-center gap-2 btn-primary text-white font-semibold px-8 py-3.5 rounded-full shadow hover:shadow-lg transition glow-effect">
+            <i class="fas fa-comments mr-1"></i>
+            Discuss Your Project
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS SECTION -->
+    <section id="solutions" class="section-padding bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="inline-block bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-xs font-semibold mb-4">OUR
+            SOLUTIONS</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Industry-Specific <span
+              class="gradient-text">Digital Solutions</span></h2>
+          <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+            We deliver tailored technology solutions designed to address the unique challenges of different industries.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Solution 1 -->
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="bg-blue-100 text-blue-600 p-3 rounded-xl">
+                <i class="fas fa-chart-line text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">FinTech Solutions</h3>
+            </div>
+            <p class="text-slate-600 mb-6">
+              Secure, scalable, and compliant financial technology platforms that enable innovation while meeting
+              regulatory requirements.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1.5 rounded-full">Payment Processing</span>
+              <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1.5 rounded-full">Risk Management</span>
+              <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1.5 rounded-full">Regulatory Compliance</span>
+            </div>
+            <a href="#contact"
+              class="text-blue-600 font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+              Explore FinTech Solutions
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Solution 2 -->
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="bg-green-100 text-green-600 p-3 rounded-xl">
+                <i class="fas fa-heartbeat text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">Healthcare Technology</h3>
+            </div>
+            <p class="text-slate-600 mb-6">
+              HIPAA-compliant healthcare solutions that improve patient care, streamline operations, and ensure data
+              security.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-green-100 text-green-700 text-xs px-3 py-1.5 rounded-full">EHR Systems</span>
+              <span class="bg-green-100 text-green-700 text-xs px-3 py-1.5 rounded-full">Telemedicine</span>
+              <span class="bg-green-100 text-green-700 text-xs px-3 py-1.5 rounded-full">Healthcare Analytics</span>
+            </div>
+            <a href="#contact"
+              class="text-green-600 font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+              Explore Healthcare Solutions
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Solution 3 -->
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="bg-purple-100 text-purple-600 p-3 rounded-xl">
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">E-Commerce Platforms</h3>
+            </div>
+            <p class="text-slate-600 mb-6">
+              High-performance e-commerce solutions that deliver seamless shopping experiences and drive conversion
+              rates.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1.5 rounded-full">Online Storefronts</span>
+              <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1.5 rounded-full">Inventory Management</span>
+              <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1.5 rounded-full">Order Processing</span>
+            </div>
+            <a href="#contact"
+              class="text-purple-600 font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+              Explore E-Commerce Solutions
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Solution 4 -->
+          <div class="solution-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="bg-orange-100 text-orange-600 p-3 rounded-xl">
+                <i class="fas fa-truck text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">Logistics & Supply Chain</h3>
+            </div>
+            <p class="text-slate-600 mb-6">
+              End-to-end logistics and supply chain management solutions that optimize operations and reduce costs.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-orange-100 text-orange-700 text-xs px-3 py-1.5 rounded-full">Fleet Management</span>
+              <span class="bg-orange-100 text-orange-700 text-xs px-3 py-1.5 rounded-full">Inventory Tracking</span>
+              <span class="bg-orange-100 text-orange-700 text-xs px-3 py-1.5 rounded-full">Route Optimization</span>
+            </div>
+            <a href="#contact"
+              class="text-orange-600 font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+              Explore Logistics Solutions
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center" data-aos="fade-up">
+          <p class="text-slate-600 mb-6">
+            Don't see your industry? We build custom solutions for unique business challenges.
+          </p>
+          <a href="#contact"
+            class="inline-flex items-center gap-2 btn-primary text-white font-semibold px-8 py-3.5 rounded-full shadow hover:shadow-lg transition glow-effect">
+            <i class="fas fa-lightbulb mr-1"></i>
+            Let's Build Your Solution
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE SECTION -->
+    <section class="section-padding bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="inline-block bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-xs font-semibold mb-4">OUR
+            EXPERTISE</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Technologies We <span
+              class="gradient-text">Excel In</span></h2>
+          <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+            Our team is proficient in a wide range of modern technologies and frameworks to deliver cutting-edge
+            solutions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <!-- Tech 1 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fab fa-aws text-4xl text-orange-500 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">AWS</h3>
+          </div>
+
+          <!-- Tech 2 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="150">
+            <i class="fab fa-docker text-4xl text-blue-500 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">Docker</h3>
+          </div>
+
+          <!-- Tech 3 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fab fa-kubernetes text-4xl text-blue-600 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">Kubernetes</h3>
+          </div>
+
+          <!-- Tech 4 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="250">
+            <i class="fab fa-node-js text-4xl text-green-600 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">Node.js</h3>
+          </div>
+
+          <!-- Tech 5 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fab fa-python text-4xl text-yellow-500 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">Python</h3>
+          </div>
+
+          <!-- Tech 6 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="350">
+            <i class="fab fa-react text-4xl text-blue-400 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">React</h3>
+          </div>
+
+          <!-- Tech 7 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-database text-4xl text-blue-700 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">PostgreSQL</h3>
+          </div>
+
+          <!-- Tech 8 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="150">
+            <i class="fas fa-database text-4xl text-green-500 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">MongoDB</h3>
+          </div>
+
+          <!-- Tech 9 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fab fa-git-alt text-4xl text-orange-600 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">Git</h3>
+          </div>
+
+          <!-- Tech 10 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="250">
+            <i class="fab fa-jenkins text-4xl text-red-500 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">Jenkins</h3>
+          </div>
+
+          <!-- Tech 11 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fab fa-linux text-4xl text-black mb-4"></i>
+            <h3 class="font-semibold text-slate-800">Linux</h3>
+          </div>
+
+          <!-- Tech 12 -->
+          <div class="expertise-card" data-aos="fade-up" data-aos-delay="350">
+            <i class="fas fa-server text-4xl text-purple-600 mb-4"></i>
+            <h3 class="font-semibold text-slate-800">Terraform</h3>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center" data-aos="fade-up">
+          <p class="text-slate-600 mb-6">
+            Our expertise spans across multiple technology stacks and platforms.
+          </p>
+          <a href="#contact"
+            class="inline-flex items-center gap-2 bg-slate-800 text-white font-semibold px-8 py-3.5 rounded-full shadow hover:shadow-lg transition hover:bg-slate-900">
+            <i class="fas fa-code mr-1"></i>
+            Explore Our Tech Stack
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES SECTION -->
+    <section id="case-studies" class="section-padding bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span
+            class="inline-block bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-xs font-semibold mb-4">CASE
+            STUDIES</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Success <span
+              class="gradient-text">Stories</span></h2>
+          <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+            Discover how we've helped businesses overcome challenges and achieve their technology goals.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Case Study 1 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition hover-scale"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 relative overflow-hidden">
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-6">
+                <span class="bg-white text-blue-700 text-xs px-3 py-1.5 rounded-full font-semibold">Cloud
+                  Migration</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">FinTech Cloud Transformation</h3>
+              <p class="text-slate-600 mb-4">
+                Migrated a financial services platform from on-premise infrastructure to AWS, improving scalability and
+                reducing costs.
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-slate-500">
+                  <span class="font-semibold text-green-600">42%</span> cost reduction
+                </div>
+                <a href="#contact"
+                  class="text-blue-600 font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                  Read more
+                  <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition hover-scale"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-700 relative overflow-hidden">
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-6">
+                <span class="bg-white text-purple-700 text-xs px-3 py-1.5 rounded-full font-semibold">DevOps</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">SaaS DevOps Implementation</h3>
+              <p class="text-slate-600 mb-4">
+                Implemented full CI/CD automation for a SaaS product, reducing deployment time from days to hours.
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-slate-500">
+                  <span class="font-semibold text-green-600">90%</span> faster deployments
+                </div>
+                <a href="#contact"
+                  class="text-purple-600 font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                  Read more
+                  <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 3 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition hover-scale"
+            data-aos="fade-up" data-aos-delay="300">
+            <div class="h-48 bg-gradient-to-r from-green-500 to-green-700 relative overflow-hidden">
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-6">
+                <span class="bg-white text-green-700 text-xs px-3 py-1.5 rounded-full font-semibold">Data
+                  Engineering</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Healthcare Data Platform</h3>
+              <p class="text-slate-600 mb-4">
+                Built a HIPAA-compliant data analytics platform for a healthcare provider, enabling real-time insights.
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-slate-500">
+                  <span class="font-semibold text-green-600">60%</span> faster reporting
+                </div>
+                <a href="#contact"
+                  class="text-green-600 font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                  Read more
+                  <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 4 -->
+          <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition hover-scale"
+            data-aos="fade-up" data-aos-delay="400">
+            <div class="h-48 bg-gradient-to-r from-orange-500 to-orange-700 relative overflow-hidden">
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-6">
+                <span class="bg-white text-orange-700 text-xs px-3 py-1.5 rounded-full font-semibold">E-Commerce</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">E-Commerce Scaling Solution</h3>
+              <p class="text-slate-600 mb-4">
+                Scaled an online retail platform to handle 10x traffic during peak seasons with zero downtime.
+              </p>
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-slate-500">
+                  <span class="font-semibold text-green-600">100%</span> uptime during peaks
+                </div>
+                <a href="#contact"
+                  class="text-orange-600 font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                  Read more
+                  <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center" data-aos="fade-up">
+          <a href="#contact"
+            class="inline-flex items-center gap-2 btn-primary text-white font-semibold px-8 py-3.5 rounded-full shadow hover:shadow-lg transition glow-effect">
+            <i class="fas fa-book-open mr-1"></i>
+            View All Case Studies
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div data-aos="fade-right">
+            <span
+              class="inline-block bg-primary-50 text-primary-600 px-3 py-1 rounded-full text-xs font-semibold mb-4">GET
+              IN TOUCH</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Let's Build <span
+                class="gradient-text">Something Great</span> Together</h2>
+            <p class="text-slate-600 text-lg leading-relaxed mb-8">
+              Ready to transform your business with cutting-edge technology solutions? Reach out to our team for a
+              free consultation and project assessment.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="bg-primary-100 text-primary-600 p-3 rounded-full">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800">Location</h3>
+                  <p class="text-slate-600">Bangalore, India</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="bg-primary-100 text-primary-600 p-3 rounded-full">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800">Email</h3>
+                  <p class="text-slate-600">
+                    <a href="mailto:ariyansh@r-ariyansh.com"
+                      class="hover:text-primary-600 transition">ariyansh@r-ariyansh.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="bg-primary-100 text-primary-600 p-3 rounded-full">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800">Phone</h3>
+                  <p class="text-slate-600">
+                    <a href="tel:+919938636246" class="hover:text-primary-600 transition">+91 99386 36246</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="bg-primary-100 text-primary-600 p-3 rounded-full">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800">Business Hours</h3>
+                  <p class="text-slate-600">Monday - Friday: 9AM - 7PM IST</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex gap-4">
+              <a href="https://www.linkedin.com/company/r-ariyansh-technolgies/" target="_blank"
+                class="bg-slate-800 text-white p-3 rounded-full hover:bg-slate-900 transition hover-scale"
+                aria-label="Connect on LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://twitter.com/rariyanshtech" target="_blank"
+                class="bg-slate-800 text-white p-3 rounded-full hover:bg-slate-900 transition hover-scale"
+                aria-label="Follow on Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://github.com/rariyanshtech" target="_blank"
+                class="bg-slate-800 text-white p-3 rounded-full hover:bg-slate-900 transition hover-scale"
+                aria-label="View GitHub profile">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.youtube.com/@rariyanshtech" target="_blank"
+                class="bg-slate-800 text-white p-3 rounded-full hover:bg-slate-900 transition hover-scale"
+                aria-label="Watch on YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <div data-aos="fade-left">
+            <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+              <h3 class="text-2xl font-bold text-slate-900 mb-6">Send us a message</h3>
+              <form id="contactForm" class="space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                    <input type="text" id="name" name="name" required
+                      class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition form-input"
+                      placeholder="Your name">
+                  </div>
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                      class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition form-input"
+                      placeholder="your.email@example.com">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="company" class="block text-sm font-medium text-slate-700 mb-1">Company (Optional)</label>
+                  <input type="text" id="company" name="company"
+                    class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition form-input"
+                    placeholder="Your company name">
+                </div>
+
+                <div>
+                  <label for="service" class="block text-sm font-medium text-slate-700 mb-1">Service Needed</label>
+                  <select id="service" name="service"
+                    class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition form-input">
+                    <option value="">Select a service</option>
+                    <option value="cloud-devops">Cloud & DevOps</option>
+                    <option value="software-development">Software Development</option>
+                    <option value="data-engineering">Data Engineering</option>
+                    <option value="it-consulting">IT Consulting</option>
+                    <option value="security-compliance">Security & Compliance</option>
+                    <option value="support-maintenance">Support & Maintenance</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+                  <textarea id="message" name="message" rows="5" required
+                    class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition form-input"
+                    placeholder="Tell us about your project..."></textarea>
+                </div>
+
+                <button type="submit"
+                  class="w-full inline-flex items-center justify-center gap-2 btn-primary text-white font-semibold px-6 py-3.5 rounded-lg shadow hover:shadow-lg transition glow-effect">
+                  <i class="fas fa-paper-plane mr-1"></i>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-white pt-16 pb-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div>
+          <a href="#" class="flex items-center gap-3 mb-6">
+            <img src="R.png" alt="R AriYansh Technologies Logo" class="h-10 w-10 object-contain" />
+            <div class="leading-tight">
+              <div class="text-lg font-bold text-white">R AriYansh Technologies</div>
+              <div class="text-xs text-primary-400 font-medium">Empower at Scale</div>
+            </div>
+          </a>
+          <p class="text-slate-400 mb-6 max-w-xs">
+            We help businesses innovate, scale, and optimize their digital operations with cutting-edge technology
+            solutions.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://www.linkedin.com/company/r-ariyansh-technolgies/" target="_blank"
+              class="text-slate-400 hover:text-white transition" aria-label="Connect on LinkedIn">
+              <i class="fab fa-linkedin-in text-lg"></i>
+            </a>
+            <a href="https://twitter.com/rariyanshtech" target="_blank"
+              class="text-slate-400 hover:text-white transition" aria-label="Follow on Twitter">
+              <i class="fab fa-twitter text-lg"></i>
+            </a>
+            <a href="https://github.com/rariyanshtech" target="_blank"
+              class="text-slate-400 hover:text-white transition" aria-label="View GitHub profile">
+              <i class="fab fa-github text-lg"></i>
+            </a>
+            <a href="https://www.youtube.com/@rariyanshtech" target="_blank"
+              class="text-slate-400 hover:text-white transition" aria-label="Watch on YouTube">
+              <i class="fab fa-youtube text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-6">Services</h3>
+          <ul class="space-y-3">
+            <li><a href="#services" class="text-slate-400 hover:text-white transition underline-effect">Cloud &
+                DevOps</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white transition underline-effect">Software
+                Development</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white transition underline-effect">Data
+                Engineering</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white transition underline-effect">Security &
+                Compliance</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white transition underline-effect">IT
+                Consulting</a></li>
+            <li><a href="#services" class="text-slate-400 hover:text-white transition underline-effect">Support &
+                Maintenance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-6">Solutions</h3>
+          <ul class="space-y-3">
+            <li><a href="#solutions" class="text-slate-400 hover:text-white transition underline-effect">FinTech
+                Solutions</a></li>
+            <li><a href="#solutions" class="text-slate-400 hover:text-white transition underline-effect">Healthcare
+                Technology</a></li>
+            <li><a href="#solutions" class="text-slate-400 hover:text-white transition underline-effect">E-Commerce
+                Platforms</a></li>
+            <li><a href="#solutions" class="text-slate-400 hover:text-white transition underline-effect">Logistics &
+                Supply Chain</a></li>
+            <li><a href="#solutions" class="text-slate-400 hover:text-white transition underline-effect">Custom
+                Solutions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-6">Contact</h3>
+          <ul class="space-y-3 text-slate-400">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-primary-500 mt-1"></i>
+              <span>Bangalore, India</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-envelope text-primary-500 mt-1"></i>
+              <a href="mailto:ariyansh@r-ariyansh.com" class="hover:text-white transition">ariyansh@r-ariyansh.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-phone-alt text-primary-500 mt-1"></i>
+              <a href="tel:+919938636246" class="hover:text-white transition">+91 99386 36246</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-clock text-primary-500 mt-1"></i>
+              <span>Mon - Fri: 9AM - 7PM IST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-slate-400 text-sm mb-4 md:mb-0">
+          © 2023 R AriYansh Technologies Pvt Ltd. All rights reserved.
+        </p>
+        <div class="flex gap-6 text-sm text-slate-400">
+          <a href="#" class="hover:text-white transition underline-effect">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition underline-effect">Terms of Service</a>
+          <a href="#" class="hover:text-white transition underline-effect">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="backToTop" aria-label="Back to top"
+    class="fixed bottom-8 right-8 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition opacity-0 invisible z-40">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+  // Initialize AOS (Animate On Scroll)
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+    // Initialize particles.js
+    if (typeof particlesJS !== 'undefined') {
+      particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: '#2563eb'
+          },
+          shape: {
+            type: 'circle',
+            stroke: {
+              width: 0,
+              color: '#000000'
+            }
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#2563eb',
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: 'none',
+            random: false,
+            straight: false,
+            out_mode: 'out',
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: {
+              enable: true,
+              mode: 'grab'
+            },
+            onclick: {
+              enable: true,
+              mode: 'push'
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1
+              }
+            },
+            push: {
+              particles_nb: 4
+            }
+          }
+        },
+        retina_detect: true
+      });
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+
+        // Change icon based on menu state
+        if (!isExpanded) {
+          menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+        } else {
+          menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+        }
+      });
+    }
+
+    // Close mobile menu when a nav link is clicked
+    const mobileNavLinks = document.querySelectorAll('#mobileMenu a');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+      });
+    });
+
+    // Back to top button
+    const backToTopBtn = document.getElementById('backToTop');
+
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.remove('opacity-0', 'invisible');
+          backToTopBtn.classList.add('opacity-100', 'visible');
+        } else {
+          backToTopBtn.classList.remove('opacity-100', 'visible');
+          backToTopBtn.classList.add('opacity-0', 'invisible');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+
+    // Form validation and submission
+    const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+      // Get form fields
+      const nameInput = document.getElementById('name');
+      const companyInput = document.getElementById('company');
+      const emailInput = document.getElementById('email');
+      const serviceInput = document.getElementById('service');
+      const messageInput = document.getElementById('message');
+      
+      // Validation functions
+      function validateName() {
+        const nameValue = nameInput.value.trim();
+        const isValid = nameValue.length >= 3;
+        
+        if (!isValid) {
+          showError(nameInput, 'Please help us with your full name');
+        } else {
+          clearError(nameInput);
+        }
+        
+        return isValid;
+      }
+      
+      function validateCompany() {
+        const companyValue = companyInput.value.trim();
+        // Company is optional, but if provided, must be at least 3 chars
+        const isValid = companyValue === '' || companyValue.length >= 3;
+        
+        if (!isValid) {
+          showError(companyInput, 'Please help us with your Company name');
+        } else {
+          clearError(companyInput);
+        }
+        
+        return isValid;
+      }
+      
+      function validateEmail() {
+        const emailValue = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const isValid = emailRegex.test(emailValue);
+        
+        if (!isValid) {
+          showError(emailInput, 'Entered email Id seems to be invalid');
+        } else {
+          clearError(emailInput);
+        }
+        
+        return isValid;
+      }
+      
+      function validateMessage() {
+        const messageValue = messageInput.value.trim();
+        const isValid = messageValue.length >= 10;
+        
+        if (!isValid) {
+          showError(messageInput, 'Please provide more details in your message');
+        } else {
+          clearError(messageInput);
+        }
+        
+        return isValid;
+      }
+      
+      function showError(input, message) {
+        clearError(input);
+        
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'text-red-500 text-xs mt-1';
+        errorDiv.textContent = message;
+        
+        input.parentNode.appendChild(errorDiv);
+        input.classList.add('border-red-500');
+      }
+      
+      function clearError(input) {
+        const errorDiv = input.parentNode.querySelector('.text-red-500');
+        if (errorDiv) {
+          errorDiv.remove();
+        }
+        input.classList.remove('border-red-500');
+      }
+      
+      // Add event listeners for real-time validation
+      nameInput.addEventListener('blur', validateName);
+      companyInput.addEventListener('blur', validateCompany);
+      emailInput.addEventListener('blur', validateEmail);
+      messageInput.addEventListener('blur', validateMessage);
+      
+      // Form submission handler
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Validate all fields
+        const isNameValid = validateName();
+        const isCompanyValid = validateCompany();
+        const isEmailValid = validateEmail();
+        const isMessageValid = validateMessage();
+        
+        // If all valid, submit the form
+        if (isNameValid && isCompanyValid && isEmailValid && isMessageValid) {
+          // Here you would normally handle form submission to your backend
+          // For now, we'll just show a success message
+          alert('Thank you for your message! We will get back to you soon.');
+          contactForm.reset();
+        } else {
+          // Scroll to the first error
+          const firstError = contactForm.querySelector('.border-red-500');
+          if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      });
+    }
+
+    // Custom cursor
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorOutline = document.querySelector('.cursor-outline');
+
+    if (cursorDot && cursorOutline) {
+      window.addEventListener('mousemove', (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+
+        // cursorOutline.style.left = `${posX}px`;
+        // cursorOutline.style.top = `${posY}px`;
+
+        cursorOutline.animate({
+          left: `${posX}px`,
+          top: `${posY}px`
+        }, { duration: 500, fill: 'forwards' });
+      });
+
+      // Add hover effects for interactive elements
+      const hoverElements = document.querySelectorAll('a, button, input, textarea, .hover-scale');
+
+      hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+          cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        });
+
+        el.addEventListener('mouseleave', () => {
+          cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+          cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+        });
+      });
+    }
+
+    // Hide preloader when page is loaded
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+      }
+    });
+  });
+</script>
+</body>
+
+</html>
