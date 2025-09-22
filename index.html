@@ -2037,6 +2037,52 @@
       }
     });
   });
+
+  
+//Disable only right-click and certain key combinations to prevent easy access to developer tools
+(function () {
+  document.addEventListener('contextmenu', function (e) { e.preventDefault(); }, { passive: false });
+  document.addEventListener('keydown', function (e) {
+    const ctrlOrCmd = e.ctrlKey || e.metaKey;
+    if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
+    if (ctrlOrCmd && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) { e.preventDefault(); return false; }
+    if (ctrlOrCmd && (e.key === 'U' || e.key === 's' || e.key === 'S')) { e.preventDefault(); return false; }
+  }, { passive: false });
+
+  let devtoolsOpen = false;
+  const overlayId = 'devtools-block-overlay';
+  function createOverlay() {
+    if (document.getElementById(overlayId)) return;
+    const ov = document.createElement('div');
+    ov.id = overlayId;
+    ov.style.position = 'fixed';
+    ov.style.inset = '0';
+    ov.style.zIndex = '999999';
+    ov.style.background = 'rgba(0,0,0,0.85)';
+    ov.style.color = '#fff';
+    ov.style.display = 'flex';
+    ov.style.alignItems = 'center';
+    ov.style.justifyContent = 'center';
+    ov.style.textAlign = 'center';
+    ov.style.padding = '2rem';
+    ov.innerHTML = '<div><h2 style="margin:0 0 .5rem;font-size:1.5rem">Access Blocked</h2><p style="margin:0;opacity:.9">For security reasons this page is not accessible while developer tools are open.</p></div>';
+    document.body.appendChild(ov);
+  }
+  function removeOverlay() { const ov = document.getElementById(overlayId); if (ov) ov.remove(); }
+  function checkDevTools() {
+    const widthThreshold = Math.max(window.outerWidth * 0.2, 160);
+    const heightThreshold = Math.max(window.outerHeight * 0.2, 120);
+    const widthDiff = Math.abs(window.outerWidth - window.innerWidth);
+    const heightDiff = Math.abs(window.outerHeight - window.innerHeight);
+    const detected = (widthDiff > widthThreshold) || (heightDiff > heightThreshold);
+    if (detected && !devtoolsOpen) { devtoolsOpen = true; createOverlay(); document.activeElement && document.activeElement.blur(); console.clear && console.clear(); }
+    else if (!detected && devtoolsOpen) { devtoolsOpen = false; removeOverlay(); }
+  }
+  setInterval(checkDevTools, 800);
+  window.addEventListener('resize', checkDevTools);
+  document.addEventListener('click', function (e) { if (devtoolsOpen) { e.preventDefault(); e.stopPropagation(); return false; } }, true);
+})();
+
 </script>
 </body>
 
